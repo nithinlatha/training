@@ -6,3 +6,6 @@ body {
 .App-header{
   height: 500px;
 }
+.sample{
+  min-height: 100px;
+}
