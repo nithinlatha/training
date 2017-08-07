@@ -4,6 +4,8 @@ import App from './App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
+import './Latha.js';
+import './Kishore.js';
 
 ReactDOM.render(
   <App />,
@@ -11,4 +13,5 @@ ReactDOM.render(
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
 registerServiceWorker();

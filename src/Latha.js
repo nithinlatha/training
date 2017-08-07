@@ -6,7 +6,8 @@ class Latha extends Component {
     }
     render() {
         return (
-          <div>This is Latha component Name : {this.props.name}</div>
+          <div>This is Latha component Name : {this.props.name}
+          </div>
         );
     }
 }

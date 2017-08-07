@@ -6,7 +6,7 @@ class Kishore extends Component {
     }
     shouldComponentUpdate(newProps, newState){
       console.log(newProps);
-      if(newProps.id == 1){
+      if(newProps.id === 1){
         return false;
       }else{
         return true;
