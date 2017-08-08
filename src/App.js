@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Sample from './components/sample.js';
 import update from 'react-addons-update';
+import Classeight from './components/classeight';
+
 
 class App extends Component {
   constructor(props){
@@ -63,6 +65,8 @@ class App extends Component {
           Prasanth:<input type="text" onChange={this.updatePrasanth}  value={this.state.color.prasanthColor} />
 
           <Sample color={this.state.color}/>
+
+          <Classeight />
         </div>
       </div>
     );
