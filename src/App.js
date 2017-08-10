@@ -4,6 +4,8 @@ import './App.css';
 import Sample from './components/sample.js';
 import update from 'react-addons-update';
 import Classeight from './components/classeight';
+import Latha from './components/latha.js';
+
 
 
 class App extends Component {
@@ -13,7 +15,7 @@ class App extends Component {
      welcome:'Task 2 : Lifecycle with multi-components',
      color: {
        sampleColor : '#fff',
-       lathaColor: '',
+       lathaColor: 'yellow',
        madhuriColor: '',
        prasanthColor: ''
      }
@@ -65,6 +67,7 @@ class App extends Component {
           Prasanth:<input type="text" onChange={this.updatePrasanth}  value={this.state.color.prasanthColor} />
 
           <Sample color={this.state.color}/>
+            <Latha color={this.state.color}/>
 
           <Classeight />
         </div>

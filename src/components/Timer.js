@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Timer extends Component {
+export default class Timer extends Component {
   render() {
     console.log(this.props.user);
     this.props.friends.map(function(index){
