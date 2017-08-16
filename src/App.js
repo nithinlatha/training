@@ -5,7 +5,7 @@ import Sample from './components/sample.js';
 import update from 'react-addons-update';
 import Classeight from './components/classeight';
 import Latha from './components/latha.js';
-
+import Prashanth from './components/prashanth.js';
 
 
 class App extends Component {
@@ -15,9 +15,10 @@ class App extends Component {
      welcome:'Task 2 : Lifecycle with multi-components',
      color: {
        sampleColor : '#fff',
-       lathaColor: 'yellow',
        madhuriColor: '',
-       prasanthColor: ''
+       prasanthColor: 'orange',
+       lathaColor: '',
+       yellowcolor:"yellow"
      }
     };
     this.updateSample = this.updateSample.bind(this);
@@ -32,7 +33,7 @@ class App extends Component {
       })
     });
   }
-  updateLatha(event){
+ updateLatha(event){
     this.setState({
       color:update(this.state.color, {
         lathaColor:{$set: event.target.value}
@@ -49,7 +50,7 @@ class App extends Component {
   updatePrasanth(event){
     this.setState({
       color:update(this.state.color, {
-        sampleColor:{$set: event.target.value}
+        prasanthColor:{$set: event.target.value}
       })
     });
   }
@@ -62,12 +63,13 @@ class App extends Component {
           <h3>Enter Hex Value for Component</h3>
 
           Sample:<input   type="text" onChange={this.updateSample}    value={this.state.color.sampleColor} />
-          Latha:<input    type="text" onChange={this.updateLatha}     value={this.state.color.lathaColor} />
+        Latha:<input    type="text" onChange={this.updateLatha}     value={this.state.color.lathaColor} />
           Madhuri:<input  type="text" onChange={this.updateMadhuri}   value={this.state.color.madhuriColor} />
-          Prasanth:<input type="text" onChange={this.updatePrasanth}  value={this.state.color.prasanthColor} />
+          Prasanth:<input type="text"   value={this.state.color.prasanthColor} />
 
           <Sample color={this.state.color}/>
             <Latha color={this.state.color}/>
+              <Prashanth color={this.state.color}/>
 
           <Classeight />
         </div>
