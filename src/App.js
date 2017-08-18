@@ -6,7 +6,7 @@ import update from 'react-addons-update';
 import Classeight from './components/classeight';
 import Latha from './components/latha.js';
 import Prashanth from './components/prashanth.js';
-
+import Madhuri from './components/madhuri.js';
 
 class App extends Component {
   constructor(props){
@@ -15,7 +15,7 @@ class App extends Component {
      welcome:'Task 2 : Lifecycle with multi-components',
      color: {
        sampleColor : '#fff',
-       madhuriColor: '',
+       madhuriColor: 'pink',
        prasanthColor: 'orange',
        lathaColor: '',
        yellowcolor:"yellow"
@@ -43,7 +43,7 @@ class App extends Component {
   updateMadhuri(event){
     this.setState({
       color:update(this.state.color, {
-        prasanthColor:{$set: event.target.value}
+        madhuriColor:{$set: event.target.value}
       })
     });
   }
@@ -65,12 +65,12 @@ class App extends Component {
           Sample:<input   type="text" onChange={this.updateSample}    value={this.state.color.sampleColor} />
         Latha:<input    type="text" onChange={this.updateLatha}     value={this.state.color.lathaColor} />
           Madhuri:<input  type="text" onChange={this.updateMadhuri}   value={this.state.color.madhuriColor} />
-          Prasanth:<input type="text"   value={this.state.color.prasanthColor} />
+        Prasanth:<input type="text"  onChange={this.updatePrasanth} value={this.state.color.prasanthColor} />
+          <Madhuri color={this.state.color}/>
 
           <Sample color={this.state.color}/>
             <Latha color={this.state.color}/>
               <Prashanth color={this.state.color}/>
-
           <Classeight />
         </div>
       </div>
