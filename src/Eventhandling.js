@@ -22,18 +22,19 @@ class Event extends Component {
    );
  }
  practicestate(value){
+   console.log(value);
    this.setState({
      practise:update(this.state.practise, {
          yamuna:{$set:value}
      })
    });
  }
-
   render() {
     return (
       <div>
         <h1>Im parent</h1>
-        <Eventchild  changeState={this.changeValue} practicestate={this.changebtnvalue} value={this.state.initial} />   
+        <Eventchild  changeValue={this.changeState} changebtnvalue={this.practicestate}
+          value={this.state.initial} value1={this.state.practise.yamuna} />
       </div>
     );
   }
