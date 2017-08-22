@@ -26,13 +26,6 @@ class Madhuri extends Component {
       return true;
     }
     else{
-    //   console.log("Sorry i'm not pink");
-    //   setTimeout(function() {
-    //       this.setState({
-    //         madhuriColor: "pink"
-    //   });
-    // }.bind(this),3000);
-
     setTimeout(function() {
       this.setState({
         colorname:update(this.state.colorname, {

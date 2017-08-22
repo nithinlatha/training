@@ -61,16 +61,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>{this.state.welcome}</h2>
           <h3>Enter Hex Value for Component</h3>
-
           Sample:<input   type="text" onChange={this.updateSample}    value={this.state.color.sampleColor} />
-        Latha:<input    type="text" onChange={this.updateLatha}     value={this.state.color.lathaColor} />
+          Latha:<input    type="text" onChange={this.updateLatha}     value={this.state.color.lathaColor} />
           Madhuri:<input  type="text" onChange={this.updateMadhuri}   value={this.state.color.madhuriColor} />
-        Prasanth:<input type="text"  onChange={this.updatePrasanth} value={this.state.color.prasanthColor} />
+          Prasanth:<input type="text"  onChange={this.updatePrasanth} value={this.state.color.prasanthColor} />
           <Madhuri color={this.state.color}/>
-
           <Sample color={this.state.color}/>
-            <Latha color={this.state.color}/>
-              <Prashanth color={this.state.color}/>
+          <Latha color={this.state.color}/>
+          <Prashanth onChange={this.updatePrasanth} updatePrasanth={this.updatePrasanth} color={this.state.color}/>
           <Classeight />
         </div>
       </div>
