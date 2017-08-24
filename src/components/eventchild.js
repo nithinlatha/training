@@ -4,6 +4,9 @@ import { Button } from 'react-bootstrap';
 
 
  class Eventchild extends Component {
+   updateeventstate(event){
+     this.props.eventvalue(event.target.value);
+   }
   updateValue(event){
     this.props.changeValue(event.target.value);
   }
@@ -16,9 +19,11 @@ import { Button } from 'react-bootstrap';
   render() {
     return (
       <div>
-      <p className="sample">{this.props.value}</p>
-        <p className="sample">{this.props.value1}</p>
-        <input onChange={this.updateValue.bind(this)} type="text"  />
+        <p>{this.props.eventcolor}</p>
+        <input onChange={this.updateeventstate.bind(this)} type="text" />
+        <p>{this.props.value}</p>
+        <p>{this.props.value1}</p>
+        <input onChange={this.updateValue.bind(this)} type="text"/>
         <Button bsStyle="success" bsSize="large" onClick={this.ongraph.bind(this)} type="button" > Click to update </Button>
           <Button bsStyle="success" bsSize="large" onClick={this.practicegraph.bind(this)} type="button" > Click to practice </Button>
         <input className="messageCheckbox" onChange={this.updateValue.bind(this)} type="checkbox" value="1" name="mailId[]" />Kishore

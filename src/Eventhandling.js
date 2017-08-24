@@ -9,17 +9,24 @@ class Event extends Component {
      initial : 'hai',
      practise : {
        yamuna : 'android-developer',
-       mayank : 'BED'
-     }
+       mayank : 'Back-end',
+     },
+     eventcolor : 'blue',
    };
    this.changeState = this.changeState.bind(this);
    this.practicestate=this.practicestate.bind(this);
+   this.eventstate=this.eventstate.bind(this);
  }
+eventstate(value){
+  this.setState(
+    {eventcolor: value}
+  );
+}
  changeState(value){
-   console.log(value);
    this.setState(
      {initial : value}
    );
+   console.log(this.state.initial);
  }
  practicestate(value){
    console.log(value);
@@ -29,12 +36,14 @@ class Event extends Component {
      })
    });
  }
+
   render() {
     return (
       <div>
         <h1>Im parent</h1>
-        <Eventchild  changeValue={this.changeState} changebtnvalue={this.practicestate}
-          value={this.state.initial} value1={this.state.practise.yamuna} />
+          <p>{this.state.eventcolor}</p>
+        <Eventchild  changeValue={this.changeState} changebtnvalue={this.practicestate} eventvalue={this.eventstate}
+          value2={this.state.eventcolor} value={this.state.initial} value1={this.state.practise.yamuna} />
       </div>
     );
   }
