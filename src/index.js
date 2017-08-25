@@ -17,16 +17,16 @@ class App extends React.Component{
     return(
       <div className="container">
             <button onClick={()=>this.onClick()}>Click me</button>
+            {
+            this.state.visable ? <Child/> : null
+            }
       </div>
 
     )
   }
   onClick(){
-    console.log(this.state.visable);
-    alert(this.state.visable);
-    {
-      this.state.visable ? <Child/> : null
-}
+    // console.log(this.state.visable);
+    // alert(this.state.visable);
     this.setState({visable: !this.state.visable});
   }
 }
