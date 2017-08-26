@@ -9,39 +9,10 @@ body {
 .sample{
   min-height: 100px;
 }
-          .bullet-img{
-                /*background-image: url(../images/hut.jpg);*/
-                background-size: contain;
-                height: 100%;
-
-                background-size: cover;
-            }
-            img{
-                position: absolute;
-                top:0;
-                right: 0;
-                left: 0;
-                top: 50%;
-                border-radius: 50%;
-                margin: 0 auto;
-
-            }
-            .image-div{
-                -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
-                animation: mymove 5s infinite;
-                position :relative;
-            }
-            /* Safari 4.0 - 8.0 */
-            @-webkit-keyframes mymove {
-                0% {top: 0px;}
-                25% {top: 20px;left: 100px;}
-                50% {top: 50%;}
-                100% {top: 0px;}
-            }
-            /* Standard syntax */
-            @keyframes mymove {
-                0% {top: 0px;}
-                25% {top: 20px;left: 100px;}
-                50% {top: 50%;}
-                100% {top: 0px;}
-            }
+.form{
+  text-align: center;
+  margin: 0 auto;
+}
+      .form-group{
+        width:25%;
+      }
