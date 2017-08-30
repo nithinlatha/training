@@ -6,6 +6,8 @@ import update from 'react-addons-update';
 import Classeight from './components/classeight';
 import Latha from './components/latha.js';
 import Prashanth from './components/prashanth.js';
+
+import Demo,{user,numbers,alpha,userlists,listuser,listItems} from './classeleven.js';
 import Madhuri from './components/madhuri.js';
 
 class App extends Component {
@@ -55,24 +57,51 @@ class App extends Component {
     });
   }
   render() {
+    const lists =  numbers.map(function(value,index){
+      return (<li key={index}>{value}</li>);
+    })
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>{this.state.welcome}</h2>
           <h3>Enter Hex Value for Component</h3>
-
           Sample:<input   type="text" onChange={this.updateSample}    value={this.state.color.sampleColor} />
-        Latha:<input    type="text" onChange={this.updateLatha}     value={this.state.color.lathaColor} />
+          Latha:<input    type="text" onChange={this.updateLatha}     value={this.state.color.lathaColor} />
           Madhuri:<input  type="text" onChange={this.updateMadhuri}   value={this.state.color.madhuriColor} />
-        Prasanth:<input type="text"  onChange={this.updatePrasanth} value={this.state.color.prasanthColor} />
+          Prasanth:<input type="text"  onChange={this.updatePrasanth} value={this.state.color.prasanthColor} />
           <Madhuri color={this.state.color}/>
-
           <Sample color={this.state.color}/>
-            <Latha color={this.state.color}/>
-              <Prashanth color={this.state.color}/>
+          <Latha color={this.state.color}/>
+          <Prashanth color={this.state.color}/>
           <Classeight />
         </div>
+        <Demo />
+        {user}
+          {
+            userlists
+          }
+          <ul>
+          {
+            lists
+          }
+          {
+            listItems
+          }
+          </ul>
+
+          <ul>
+            {
+              listuser.map(function(value,index){
+                return (<li key={index}>{value}</li>);
+              })
+            }
+          </ul>
+        {
+          numbers.map(function(value,index){
+            return (<p key={index}>{value}</p>);
+          })
+        }
       </div>
     );
   }
